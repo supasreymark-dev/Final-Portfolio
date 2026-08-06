@@ -14,7 +14,7 @@ html{
 #skills-pointer,
 #contact-pointer,
 #send-email-pointer{
-    scroll-margin-top: 120px;
+    scroll-margin-top: 250px;
 }
 
 *{
@@ -433,4 +433,38 @@ footer{
     background-color: orangered;
     color: black;
     cursor: pointer;
+}
+
+
+
+
+/* ======================================================= */
+/*            FOR ANIMATIONS LINKED TO THE JAVASCRIPT      */
+/* ======================================================= */
+
+#projects-pointer,
+#about-me-pointer,
+#skills-pointer,
+#contact-pointer,
+#send-email-border{
+    transition: transform 0.3s ease,
+    border 0.3s ease;
+}
+
+#projects-pointer span,
+#about-me-pointer span,
+#skills-pointer span,
+#contact-pointer span,
+#send-email-border span{
+    transition: color 0.3s ease;
+}
+
+
+.zoom{
+    border: 5px solid lightblue;
+    transform: scale(1.2);
+}  
+
+.zoom .borderSPAN{
+    color: lightblue;
 }
