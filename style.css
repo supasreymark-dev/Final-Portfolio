@@ -302,6 +302,12 @@ h3{
     /* display: flex; */
 }
 
+.skills-contact .skills h3{
+    white-space: nowrap;
+    margin-top: 35px;
+    margin-bottom: 3px;
+}
+
 .skills-contact span{
 
     position: absolute;
@@ -326,6 +332,36 @@ h3{
 .skills-contact li{
     font-weight: 100;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 50px;
+    margin-right: 0;
+    /* border: 1px solid white; */
+    /* width: 300px; */
+}
+
+
+.contact a{
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Helvetica; */
+    white-space: nowrap;
+    padding: 10px;
+    font-size: 17px;
+    color: orangered;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease-out,
+    background-color 0.2s ease-out;
+
+}
+
+.contact i{
+    margin: 0 17px;
+    font-size: 30px;
+}
+
+.contact a:hover{
+    color: black;
+    background-color: orangered;
 }
 
 footer{
@@ -373,21 +409,21 @@ footer{
 .send-email form label{
     display: block;
     color: orangered;
-    /* border: 2px solid orangered; */
     background-color: black;
     text-align: left;
     width: 20%;
     padding-left: 20px;
-    font-size: 20px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .send-email form input{
     display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: black;
     color: orangered;
     border: 2px solid orangered;
-    font-size: 25px;
+    font-size: 21px;
     /* width: 400px; */
     height: 50px;
     padding: 10px 20px;
@@ -462,7 +498,7 @@ footer{
 
 .zoom{
     border: 5px solid lightblue;
-    transform: scale(1.2);
+    transform: scale(1.08);
 }  
 
 .zoom .borderSPAN{
