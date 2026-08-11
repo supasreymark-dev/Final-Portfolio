@@ -9,22 +9,20 @@
 //     event.preventDefault();
 
 //     let emails = document.getElementById("email").value;
-//     let names = document.getElementById("name").value;
 
-//     alert("someone got emailed name is " + names + " email is " + emails);
 // })
 
 
 
-const form = document.getElementById("emailFORM");
+// const form = document.getElementById("emailFORM");
 
-form.addEventListener("submit", function(event){
+// form.addEventListener("submit", function(event){
 
-    event.preventDefault();
+//     event.preventDefault();
 
-    alert("hello world");
-    alert(`hi world `);
-})
+//     alert("hello world");
+//     alert(`hi world `);
+// })
 
 const anchors = document.querySelectorAll("a");
 
@@ -113,3 +111,54 @@ logic();
 //         console.log(event.target.textContent);
 //     });
 // });
+
+
+const emailForm = document.getElementById("emailFORM");
+
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const emailMessage = document.getElementById("emailMessage");
+const sendMail = document.getElementById("sendEmail");
+
+
+emailForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const visitorName = name.value;
+    const visitorEmail = email.value;
+    const message = emailMessage.value;
+    
+    alert("hello world");
+
+    if(visitorName.trim() != "" && visitorEmail.trim() != "" && message.trim() != ""){
+        try{
+            const response = await fetch("http://127.0.0.1:8000/sendEmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify({
+                    name: visitorName,
+                    email: visitorEmail,
+                    message: message
+                })
+            });
+
+            const data = await response.json();
+
+            if(!response.ok){
+                throw new Error(data.detail || "Failed to send Email");
+            }
+
+            if(data.success){
+                alert("EMAIL HAS BEEN SUCCESSFULLY SENT!");
+            }
+        }catch(error){
+            alert("Oops! Message has not been sent. Please try again!");
+        }
+    }
+
+    else{
+        alert("Oops! Something went wrong! Either the server is not active or a technical error.");
+    }
+});

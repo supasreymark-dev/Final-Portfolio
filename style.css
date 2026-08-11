@@ -504,3 +504,30 @@ footer{
 .zoom .borderSPAN{
     color: lightblue;
 }
+
+
+.documents{
+    /* text-align: center; */
+    /* border: 1px solid white; */
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.documents a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    /* gap: 50px; */
+    color: orangered;
+    text-decoration: none;
+    /* transition: font-size .2s ease; */
+    transition: .2s ease-out
+}
+
+.documents a:hover{
+    text-decoration: underline;
+    /* font-size: 21px; */
+    transform: scale(1.2, 1.2);
+}
