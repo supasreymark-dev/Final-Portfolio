@@ -132,7 +132,7 @@ emailForm.addEventListener("submit", async (event) => {
 
     if(visitorName.trim() != "" && visitorEmail.trim() != "" && message.trim() != ""){
         try{
-            const response = await fetch("http://127.0.0.1:8000/sendEmail", {
+            const response = await fetch("https://final-portfolio-bd6t.onrender.com/sendEmail", {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json"
