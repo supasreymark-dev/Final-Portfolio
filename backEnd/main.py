@@ -36,7 +36,7 @@ def send_email(email: emailRequest):
     receiver_email = "supasreymark@gmail.com"
 
     params = {
-        "from": "supasreymark@gmail.com",
+        "from": "onboarding@resend.dev",
         "to": [receiver_email],
         "subject": "Message coming from portfolio website",
         "reply-to": email.email,
