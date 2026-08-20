@@ -75,12 +75,15 @@ header a{
     padding: 12px 24px;
 
     white-space: nowrap;   /* Prevents text from wrapping */
+
+    transition: color 0.2s ease-out,
+                border-color 0.2s ease-out;
 }
 
 /* Hover effect */
 header a:hover{
-    background: orangered;
-    color: black;
+    color: gray;
+    border-color: gray;
 }
 
 section{
@@ -163,6 +166,10 @@ main{
     /* border: 2px solid orangered; */
 }
 
+/* hr{
+    border-top: 1px solid white;
+} */
+
 h3{
     text-align: center;
     margin: 30px 20px;
@@ -178,6 +185,41 @@ h3{
     text-align: justify;
     text-indent: 50px;
     line-height: 30px;
+}
+
+.footerLabel{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid white; */
+    padding: 20px;
+    gap: 40px;
+}
+
+.downloadFile{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto 0; */
+}  
+
+.downloadFile a{
+    border: 1px solid orangered;
+    text-decoration: none;
+    color: orangered;
+    padding: 8px 20px;
+    font-size: 16px;
+    /* display: block; */
+    border-radius: 100px;
+    transition: color 0.2s ease-out, border-color 0.2s ease-out
+
+}
+
+.downloadFile a:hover{
+    color: gray;
+    border-color: gray;
+    /* background-color: orangered; */
 }
 
 .tech-stack{
@@ -208,10 +250,42 @@ h3{
     padding: 0px 8px;
 }
 
+.icons{
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .tech-stack .icon1{
     font-size: 45px;
-    /* border: 1px solid orangered; */
+    /* border: 1px solid white; */
     margin: 30px;
+    /* color: none; */
+}
+
+.iconAndLabel{
+    display: block;
+    /* border: 1px solid white; */
+}
+
+.iconLabel{
+    padding: 4px 0;
+    /* border: 1px solid white; */
+    margin: 0;
+    display: block;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pythonIcon{
+    transform: translateY(-30px);
+}
+
+.github-icon1{
+    margin-top: 20px;
 }
 
 .github-icon{
@@ -220,7 +294,7 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid orange; */
+    /* border: 1px solid white; */
 }
 
 .github-icon i{
@@ -238,11 +312,13 @@ h3{
     border: 1px solid orangered;
     padding: 8px 20px;
     border-radius: 100px;
+    transition: color 0.2s ease-out, 
+                border-color 0.2s ease-out;
 }
 
 .github-icon a:hover{
-    background-color: orangered;
-    color: black;
+    color: gray;
+    border-color: gray;
 }
 /* 
 .section2-row2{
@@ -349,8 +425,7 @@ h3{
     color: orangered;
     border-radius: 20px;
     text-decoration: none;
-    transition: color 0.2s ease-out,
-    background-color 0.2s ease-out;
+    transition: color 0.2s ease-out;
 
 }
 
@@ -360,8 +435,7 @@ h3{
 }
 
 .contact a:hover{
-    color: black;
-    background-color: orangered;
+    color: gray;
 }
 
 footer{
@@ -462,12 +536,14 @@ footer{
     padding: 10px 30px;
     border-radius: 30px;
     margin-top: 17px;
+    transition: color 0.2s ease-out,
+                border-color 0.2s ease-out;
     
 }
 
 .send-email button:hover{
-    background-color: orangered;
-    color: black;
+    border-color: gray;
+    color: gray;
     cursor: pointer;
 }
 
@@ -523,10 +599,14 @@ footer{
     color: orangered;
     text-decoration: none;
     /* transition: font-size .2s ease; */
-    transition: .2s ease-out
+    transition: transform 0.2s ease-out,
+                color 0.2s ease-out,
+                text-decoration-color 0.2s ease-out;
 }
 
 .documents a:hover{
+    color: gray;
+    text-decoration-color: gray;
     text-decoration: underline;
     /* font-size: 21px; */
     transform: scale(1.2, 1.2);
